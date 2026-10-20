@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import logo from "./images/logo.png";
 
 type ImageInfo = { url: string; uploadedAt?: string } | null;
 type SiteSettings = { fontFamily?: string; featuredGiftDay?: number };
@@ -55,11 +56,7 @@ export default function Home() {
       </div>
       <header className="intro">
         <p className="eyebrow">즐거운 ✦ 성탄절</p>
-        <img
-  src="/logo.png"
-  alt="胡桃劇場"
-  className="site-logo"
-/>
+        <img src={logo.src} alt="胡桃劇場" />
         <p className="subtitle">Advent Calendar</p>
       </header>
 
