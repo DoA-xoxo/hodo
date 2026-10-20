@@ -92,7 +92,7 @@ footer { z-index: 1; text-align: center; font-size: 10px; letter-spacing: .12em;
 .site-logo {
   display: block;
   width: 400px;
-  max-width: 65vw;
+  max-width: 80vw;
   height: auto;
   object-fit: contain;
   margin: 0 auto;
