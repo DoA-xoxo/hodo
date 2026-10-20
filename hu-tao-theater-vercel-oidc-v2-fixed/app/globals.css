@@ -27,6 +27,7 @@ button, input { font: inherit; }
     #14212D 76%,
     #142D32 100%
   );
+}
 .scene::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(ellipse at 50% 38%, rgba(180,207,255,.15), transparent 48%),
