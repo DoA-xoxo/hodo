@@ -28,7 +28,7 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: "폰트 선택값이 올바르지 않습니다." }, { status: 400 });
       }
       if (!Number.isInteger(featuredGiftDay) || featuredGiftDay < 1 || featuredGiftDay > 24) {
-        return NextResponse.json({ error: "팝업 선물 날짜는 1~24일 중에서 선택해 주세요." }, { status: 400 });
+        return NextResponse.json({ error: "팝업 선물 날짜는 11~25일 중에서 선택해 주세요." }, { status: 400 });
       }
       await put("settings/site.json", JSON.stringify({ fontFamily, featuredGiftDay }), {
         access: "public", contentType: "application/json", addRandomSuffix: false, allowOverwrite: true
@@ -53,7 +53,7 @@ export async function POST(request: Request) {
     } else if (action === "gift") {
       const day = Number(form.get("day"));
       if (!Number.isInteger(day) || day < 1 || day > 24) {
-        return NextResponse.json({ error: "날짜는 1~24일 중에서 선택해 주세요." }, { status: 400 });
+        return NextResponse.json({ error: "날짜는 11~25일 중에서 선택해 주세요." }, { status: 400 });
       }
       pathname = `gifts/day-${String(day).padStart(2, "0")}.png`;
     } else {
