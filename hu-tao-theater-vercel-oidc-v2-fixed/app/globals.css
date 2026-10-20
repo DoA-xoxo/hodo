@@ -9,8 +9,24 @@ button, input { font: inherit; }
   position: relative; isolation: isolate; min-height: 100svh; overflow: hidden;
   display: flex; flex-direction: column; align-items: center;
   padding: clamp(38px, 7vh, 76px) 20px 28px; color: var(--ink);
-  background: linear-gradient(180deg, #101a3a 0%, #263c66 35%, #7186a6 65%, #e8cfc1 100%);
-}
+  background:
+  radial-gradient(
+    ellipse at 50% 100%,
+    rgba(25, 59, 53, 0.42) 0%,
+    transparent 58%
+  ),
+  radial-gradient(
+    ellipse at 50% 0%,
+    rgba(35, 43, 79, 0.28) 0%,
+    transparent 52%
+  ),
+  linear-gradient(
+    180deg,
+    #030610 0%,
+    #091329 48%,
+    #14212D 76%,
+    #142D32 100%
+  );
 .scene::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(ellipse at 50% 38%, rgba(180,207,255,.15), transparent 48%),
@@ -57,12 +73,30 @@ button, input { font: inherit; }
 }
 .calendar-area { z-index: 1; width: min(100%, 600px); flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 32px 0 26px; }
 .calendar-button {
-  display: flex; justify-content: center; align-items: center; width: 100%; min-height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 260px;
   cursor: pointer;
+
+  /* 배경 투명화 */
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
-.calendar-button:not(:disabled):hover { transform: translateY(-4px); box-shadow: 0 28px 72px rgba(8,15,39,.28); }
-.calendar-button:disabled { cursor: default; }
-.calendar-image { display: block; width: 100%; height: auto; max-height: 66svh; object-fit: contain; }
+
+.calendar-button:not(:disabled):hover {
+  transform: translateY(-4px);
+  box-shadow: none;
+}
+
+.calendar-button:disabled {
+  cursor: default;
+}
+.calendar-image { display: block; width: 100%; height: auto; max-height: 66svh; object-fit: contain;   
+  /* 이미지 요소의 배경 투명화 */
+  background: transparent;}
 .placeholder { padding: 36px 18px; line-height: 2.2; font-size: 13px; letter-spacing: .04em; color: #f8f1f4; }
 .sparkle { font-size: 44px; line-height: 1.5; }
 .hint { margin: 18px 0 0; font-size: 11px; letter-spacing: .08em; color: rgba(255,255,255,.8); }
