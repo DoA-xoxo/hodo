@@ -56,7 +56,11 @@ export default function Home() {
       </div>
       <header className="intro">
         <p className="eyebrow">즐거운 ✦ 성탄절</p>
-        <img src={logo.src} alt="胡桃劇場" />
+        <img
+  src={logo.src}
+  alt="胡桃劇場"
+  className="site-logo"
+/>
         <p className="subtitle">Advent Calendar</p>
       </header>
 
