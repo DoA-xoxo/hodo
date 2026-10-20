@@ -14,9 +14,9 @@ export default function AdminPage() {
   const [password, setPassword] = useState("");
   const [calendarFile, setCalendarFile] = useState<File | null>(null);
   const [giftFile, setGiftFile] = useState<File | null>(null);
-  const [giftDay, setGiftDay] = useState("1");
+  const [giftDay, setGiftDay] = useState("11");
   const [fontFamily, setFontFamily] = useState("serif");
-  const [featuredGiftDay, setFeaturedGiftDay] = useState("1");
+  const [featuredGiftDay, setFeaturedGiftDay] = useState("11");
   const [calendarUrl, setCalendarUrl] = useState<string | null>(null);
   const [gifts, setGifts] = useState<GiftMap>({});
   const [busy, setBusy] = useState(false);
@@ -29,7 +29,7 @@ export default function AdminPage() {
       setCalendarUrl(data.calendar?.url ?? null);
       setGifts(data.gifts ?? {});
       setFontFamily(data.settings?.fontFamily ?? "serif");
-      setFeaturedGiftDay(String(data.settings?.featuredGiftDay ?? 1));
+      setFeaturedGiftDay(String(data.settings?.featuredGiftDay ?? 11));
     } catch { /* Initial state remains usable if loading fails. */ }
   }
   useEffect(() => { void refresh(); }, []);
@@ -78,7 +78,10 @@ export default function AdminPage() {
     } finally { setBusy(false); }
   }
 
-  const dayOptions = Array.from({ length: 24 }, (_, index) => index + 1);
+  const dayOptions = Array.from(
+  { length: 15 },
+  (_, index) => index + 11
+);
   return (
     <main className="admin-page">
       <section className="admin-card admin-card-wide">
@@ -102,7 +105,7 @@ export default function AdminPage() {
 
         <section className="admin-section">
           <h2>2. 날짜별 선물 이미지</h2>
-          <p className="section-help">1~24일 이미지를 각각 등록합니다. 같은 날짜에 다시 업로드하면 해당 날짜 이미지가 교체됩니다.</p>
+          <p className="section-help">11~25일 이미지를 각각 등록합니다. 같은 날짜에 다시 업로드하면 해당 날짜 이미지가 교체됩니다.</p>
           <div className="gift-status-grid">
             {dayOptions.map((day) => <button type="button" key={day} className={`day-chip ${gifts[String(day)] ? "day-chip-done" : ""} ${giftDay === String(day) ? "day-chip-selected" : ""}`} onClick={() => setGiftDay(String(day))}>{day}일 {gifts[String(day)] ? "✓" : "·"}</button>)}
           </div>
