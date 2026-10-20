@@ -29,8 +29,8 @@ export async function GET() {
           const parsed = await response.json();
           settings = {
             fontFamily: validFonts.includes(parsed.fontFamily) ? parsed.fontFamily : "serif",
-            featuredGiftDay: Number.isInteger(parsed.featuredGiftDay) && parsed.featuredGiftDay >= 1 && parsed.featuredGiftDay <= 24
-              ? parsed.featuredGiftDay : 1
+            featuredGiftDay: Number.isInteger(parsed.featuredGiftDay) && parsed.featuredGiftDay >= 11 && parsed.featuredGiftDay <= 25
+              ? parsed.featuredGiftDay : 11
           };
         }
       } catch { /* Use defaults when settings have not been saved yet. */ }
