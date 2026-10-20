@@ -28,7 +28,7 @@
 
 ## 이미지 및 저장 구조
 - 메인 캘린더: `calendar/main.png`
-- 날짜별 선물: `gifts/day-01.png` ~ `gifts/day-24.png`
+- 날짜별 선물: `gifts/day-11.png` ~ `gifts/day-25.png`
 - 표시 설정: `settings/site.json`
 - PNG만 허용하며 파일당 최대 4MB입니다.
 - 이미지 Blob URL은 공개 URL입니다. 누구나 공개 이미지에 접근하고 저장할 수 있지만, 업로드/설정 API는 `ADMIN_PASSWORD`로 보호됩니다.
