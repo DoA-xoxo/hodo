@@ -12,12 +12,15 @@ export async function GET() {
     const byPath = new Map(blobs.map((blob) => [blob.pathname, blob]));
     const calendarBlob = byPath.get("calendar/main.png");
     const gifts: Record<string, { url: string; uploadedAt: string }> = {};
-    for (let day = 1; day <= 24; day++) {
+    for (let day = 11; day <= 25; day++) {
       const blob = byPath.get(`gifts/day-${String(day).padStart(2, "0")}.png`);
       if (blob) gifts[String(day)] = { url: blob.url, uploadedAt: blob.uploadedAt.toISOString() };
     }
 
-    let settings: { fontFamily: string; featuredGiftDay: number } = { fontFamily: "serif", featuredGiftDay: 1 };
+    let settings: { fontFamily: string; featuredGiftDay: number } = {
+  fontFamily: "serif",
+  featuredGiftDay: 11
+};
     const settingsBlob = byPath.get("settings/site.json");
     if (settingsBlob) {
       try {
