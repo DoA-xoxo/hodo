@@ -58,9 +58,7 @@ button, input { font: inherit; }
 .calendar-area { z-index: 1; width: min(100%, 600px); flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 32px 0 26px; }
 .calendar-button {
   display: flex; justify-content: center; align-items: center; width: 100%; min-height: 260px;
-  border: 1px solid rgba(255,255,255,.42); border-radius: 5px; padding: 0; overflow: hidden;
-  background: rgba(255,255,255,.08); box-shadow: 0 22px 65px rgba(8,15,39,.2);
-  cursor: pointer; transition: transform .25s ease, box-shadow .25s ease; color: white;
+  cursor: pointer;
 }
 .calendar-button:not(:disabled):hover { transform: translateY(-4px); box-shadow: 0 28px 72px rgba(8,15,39,.28); }
 .calendar-button:disabled { cursor: default; }
