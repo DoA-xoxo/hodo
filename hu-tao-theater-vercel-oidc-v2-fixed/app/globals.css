@@ -89,11 +89,15 @@ footer { z-index: 1; text-align: center; font-size: 10px; letter-spacing: .12em;
 .day-chip-done { border-color: rgba(201,231,210,.75); background: rgba(201,231,210,.13); }
 .day-chip-selected { outline: 2px solid #f5e6e0; outline-offset: 1px; }
 @media (max-width: 480px) { .gift-status-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-.site-logo {
-  display: block;
-  width: 100px;
-  max-width: 30vw;
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto;
-}
+<img
+  src={logo.src}
+  alt="胡桃劇場"
+  style={{
+    display: "block",
+    width: "150px",
+    maxWidth: "65vw",
+    height: "auto",
+    objectFit: "contain",
+    margin: "0 auto",
+  }}
+/>
