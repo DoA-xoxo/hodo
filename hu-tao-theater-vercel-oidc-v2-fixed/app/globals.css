@@ -101,7 +101,7 @@ button, input { font: inherit; }
 .sparkle { font-size: 44px; line-height: 1.5; }
 .hint { margin: 18px 0 0; font-size: 11px; letter-spacing: .08em; color: rgba(255,255,255,.8); }
 footer { z-index: 1; text-align: center; font-size: 10px; letter-spacing: .12em; color: rgba(255,255,255,.75); padding-top: 12px; }
-.snow { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.snow { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 10; }
 .snow i { position: absolute; top: -12px; display: block; border-radius: 50%; background: #fff; filter: drop-shadow(0 0 4px rgba(255,255,255,.7)); animation: snowfall linear infinite; }
 @keyframes snowfall { 0% { transform: translate3d(0,-4vh,0); } 100% { transform: translate3d(30px,110vh,0); } }
 .modal-backdrop { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; padding: 18px; background: rgba(7,12,31,.82); backdrop-filter: blur(8px); }
