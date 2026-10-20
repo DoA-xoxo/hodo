@@ -16,7 +16,6 @@ button, input { font: inherit; }
   background: radial-gradient(ellipse at 50% 38%, rgba(180,207,255,.15), transparent 48%),
               radial-gradient(ellipse at 50% 100%, rgba(255,222,199,.3), transparent 42%);
 }
-
 .intro {
   position: relative;
   z-index: 1;
@@ -25,32 +24,35 @@ button, input { font: inherit; }
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-inline: auto;
 }
 
 .eyebrow {
   width: 100%;
   margin: 0 0 13px;
-  letter-spacing: .18em;
+  text-align: center;
+  letter-spacing: .26em;
   font-size: 10px;
   font-weight: 700;
   opacity: .8;
-  text-align: center;
 }
 
 .site-logo {
   display: block;
-  max-width: 100%;
+  width: min(82%, 420px);
   height: auto;
-  margin: 0 auto;
+  object-fit: contain;
+  margin-inline: auto;
+  align-self: center;
 }
 
 .subtitle {
   width: 100%;
   margin: 16px 0 0;
+  text-align: center;
   font-size: 14px;
   letter-spacing: .12em;
   color: #f3eaf1;
-  text-align: center;
 }
 .calendar-area { z-index: 1; width: min(100%, 600px); flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 32px 0 26px; }
 .calendar-button {
