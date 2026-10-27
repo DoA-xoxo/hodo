@@ -48,12 +48,25 @@ export default function Home() {
   return (
     <main className="scene" style={{ fontFamily: fontMap[fontFamily] ?? fontMap.serif }}>
       <div className="snow" aria-hidden="true">
-        {Array.from({ length: 65 }, (_, i) => <i key={i} style={{
-          left: `${(i * 37.7) % 100}%`, animationDelay: `${-((i * 1.73) % 18)}s`,
-          animationDuration: `${10 + ((i * 13) % 14)}s`, opacity: 0.35 + ((i * 7) % 60) / 100,
-          width: `${2 + (i % 4)}px`, height: `${2 + (i % 4)}px`
-        }} />)}
-      </div>
+  {Array.from({ length: 120 }, (_, i) => {
+    const size = 2 + (i % 4);
+
+    return (
+      <i
+        key={i}
+        style={{
+          left: `${(i * 47.37) % 100}%`,
+          top: "-12px",
+          animationDelay: `${-(i * 0.37) % 16}s`,
+          animationDuration: `${8 + ((i * 7) % 8)}s`,
+          opacity: 0.4 + ((i * 13) % 50) / 100,
+          width: `${size}px`,
+          height: `${size}px`,
+        }}
+      />
+    );
+  })}
+</div>
       <header className="intro">
         <p className="eyebrow"> 즐거운 ✦ 성탄절</p>
         <img
