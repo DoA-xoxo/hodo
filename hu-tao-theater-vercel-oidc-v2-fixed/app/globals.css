@@ -123,11 +123,11 @@ footer { z-index: 1; text-align: center; font-size: 10px; letter-spacing: .12em;
 }
 
 @keyframes snowfall {
-  0% {
+  from {
     transform: translate3d(0, -5vh, 0);
   }
 
-  100% {
+  to {
     transform: translate3d(30px, 110vh, 0);
   }
 }
