@@ -48,20 +48,22 @@ export default function Home() {
   return (
     <main className="scene" style={{ fontFamily: fontMap[fontFamily] ?? fontMap.serif }}>
       <div className="snow" aria-hidden="true">
-  {Array.from({ length: 120 }, (_, i) => {
-    const size = 2 + (i % 4);
+  {Array.from({ length: 140 }, (_, i) => {
+    const size = Math.random() * 3.5 + 1.5;
+    const duration = Math.random() * 12 + 9;
+    const delay = Math.random() * -25;
 
     return (
       <i
         key={i}
         style={{
-          left: `${(i * 47.37) % 100}%`,
-          top: "-12px",
-          animationDelay: `${-(i * 0.37) % 16}s`,
-          animationDuration: `${8 + ((i * 7) % 8)}s`,
-          opacity: 0.4 + ((i * 13) % 50) / 100,
+          left: `${Math.random() * 100}%`,
+          animationDelay: `${delay}s`,
+          animationDuration: `${duration}s`,
+          opacity: Math.random() * 0.6 + 0.2,
           width: `${size}px`,
           height: `${size}px`,
+          ["--drift" as string]: `${Math.random() * 140 - 70}px`,
         }}
       />
     );
