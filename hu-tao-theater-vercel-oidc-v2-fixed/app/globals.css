@@ -60,7 +60,7 @@ button, input { font: inherit; }
   max-width: 100%;
   object-fit: contain;
   margin: 0 auto;
-  transform: translateX(-2px);
+  transform: translateX(-1.5px);
 }
 
 .subtitle {
@@ -94,7 +94,7 @@ button, input { font: inherit; }
 .calendar-button:disabled {
   cursor: default;
 }
-.calendar-image { display: block; width: 100%; height: auto; max-height: 66svh; object-fit: contain;   
+.calendar-image { display: block; width: 100%; height: auto; max-height: 66svh; object-fit: contain; transform: translate(2px, -10px);  
   /* 이미지 요소의 배경 투명화 */
   background: transparent;}
 .placeholder { padding: 36px 18px; line-height: 2.2; font-size: 13px; letter-spacing: .04em; color: #f8f1f4; }
