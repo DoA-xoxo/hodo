@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import logo from "./images/logo.png";
+import logo from "./images/logo1.png";
 
 type ImageInfo = { url: string; uploadedAt?: string } | null;
 type SiteSettings = { fontFamily?: string; featuredGiftDay?: number };
