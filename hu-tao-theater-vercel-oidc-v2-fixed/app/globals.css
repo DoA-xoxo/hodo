@@ -60,7 +60,7 @@ button, input { font: inherit; }
   max-width: 100%;
   object-fit: contain;
   margin: 0 auto;
-  transform: translateX(-1.5px);
+  transform: translateX(-1.4px);
 }
 
 .subtitle {
