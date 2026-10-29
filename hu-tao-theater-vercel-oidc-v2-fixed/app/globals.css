@@ -192,3 +192,36 @@ footer { z-index: 1; text-align: center; font-size: 10px; letter-spacing: .12em;
   object-fit: contain;
   margin: 0 auto;
 }
+
+@admin
+.login-card {
+  width: min(100%, 400px);
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.login-card .eyebrow {
+  margin-bottom: 12px;
+}
+
+.login-card .admin-desc {
+  text-align: center;
+  margin: 12px 0 26px;
+}
+
+.login-card form {
+  width: 100%;
+}
+
+.login-card .upload-button {
+  margin-top: 22px;
+}
+
+.login-card .back-link {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+}
