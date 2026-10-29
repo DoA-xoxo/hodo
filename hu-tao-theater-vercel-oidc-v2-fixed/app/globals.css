@@ -30,7 +30,6 @@ button, input { font: inherit; }
 .scene::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: radial-gradient(ellipse at 50% 38%, rgba(180,207,255,.15), transparent 48%),
-              radial-gradient(ellipse at 50% 100%, rgba(255,222,199,.3), transparent 42%);
 }
 .intro {
   position: relative;
@@ -65,9 +64,9 @@ button, input { font: inherit; }
 
 .subtitle {
   width: 100%;
-  margin: 5px 0 0;
+  margin: 0 0 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 10px;
   letter-spacing: .12em;
   color: #f3eaf1;
 }
