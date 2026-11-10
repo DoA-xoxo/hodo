@@ -93,14 +93,19 @@ export default function Home() {
 
       {showImage && activeGift && (
         <div className="modal-backdrop" role="presentation" onMouseDown={(e) => { if (e.target === e.currentTarget) setShowImage(false); }}>
-          <div className="modal" role="dialog" aria-modal="true" aria-label={`${featuredGiftDay}일 선물 PNG`}>
+          <div className="modal" role="dialog" aria-modal="true" aria-label={`${featuredGiftDay} 일 선물 PNG`}>
             <button className="close" onClick={() => setShowImage(false)} aria-label="닫기">×</button>
             <div className="gift-label">✦ A LITTLE CHRISTMAS GIFT ✦</div>
             <div className="modal-image-wrap">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="modal-image" src={activeGift.url} alt={`${featuredGiftDay}일 선물 이미지`} />
+              <img className="modal-image" src={activeGift.url} alt={`${featuredGiftDay} 일 선물 이미지`} />
             </div>
-            <a className="download-link" href={activeGift.url} download={`hu-tao-gift-${featuredGiftDay}.png`} target="_blank" rel="noreferrer">선물 PNG 저장</a>
+            <a
+  className="download-link"
+  href={`/api/download-gift?day=${featuredGiftDay}`}
+>
+  선물 PNG 저장
+</a>
             <p className="modal-note">이미지를 길게 누르거나 우클릭해도 저장할 수 있어요.</p>
           </div>
         </div>
